@@ -1,8 +1,12 @@
-// Prompt que solicita número al usuario
-let numero = parseInt(prompt('Ingresa un número:'));
+//prompt que solicita numero a usuario
+var numero = parseInt(prompt('Ingresa un número:'));
 
-// Valida que el número esté entre 1 y 20 (arrow function)
-const validarNumero = (numero) => {
+if (validarNumero(numero)) {
+    generarTablasYFactoriales(numero);
+}
+
+// Valida que el numero esté entre 1 y 20
+function validarNumero(numero) {
     if (numero >= 1 && numero <= 20) {
         return true; // El número es válido
     } else {
@@ -11,8 +15,9 @@ const validarNumero = (numero) => {
     }
 }
 
-// Calcular y mostrar la multiplicación (arrow function)
-const generarTablasYFactoriales = (numero) => {
+
+// Calcular y mostrar la multiplicación
+function generarTablasYFactoriales(numero) {
     // Generar tablas de multiplicar
     for (let i = 1; i <= numero; i++) {
         for (let j = numero; j <= numero; j++) {
@@ -20,17 +25,12 @@ const generarTablasYFactoriales = (numero) => {
         }
     }
 
-    // Calcular y mostrar los factoriales
-    for (let i = 1; i <= numero; i++) {
+      // Calcular y mostrar los factoriales
+      for (let i = 1; i <= numero; i++) {
         let factorial = 1;
         for (let j = 1; j <= i; j++) {
             factorial *= j;
         }
         console.log(`Factorial de ${i} es: ${factorial}`);
     }
-}
-
-// Llamada a las funciones
-if (validarNumero(numero)) {
-    generarTablasYFactoriales(numero);
 }
