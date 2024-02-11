@@ -14,3 +14,13 @@ function validarNumero(numero) {
         return false; // El número no es válido
     }
 }
+
+
+// Calcular y mostrar la multiplicación
+function generarTablasYFactoriales(numero) {
+    // Generar tablas de multiplicar
+    for (let i = 1; i <= numero; i++) {
+        for (let j = numero; j <= numero; j++) {
+            console.log(`${i} x ${j} = ${i * j}`);
+        }
+    }
