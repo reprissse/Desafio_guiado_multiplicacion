@@ -24,3 +24,13 @@ function generarTablasYFactoriales(numero) {
             console.log(`${i} x ${j} = ${i * j}`);
         }
     }
+
+      // Calcular y mostrar los factoriales
+      for (let i = 1; i <= numero; i++) {
+        let factorial = 1;
+        for (let j = 1; j <= i; j++) {
+            factorial *= j;
+        }
+        console.log(`Factorial de ${i} es: ${factorial}`);
+    }
+}
